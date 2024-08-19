@@ -1,0 +1,81 @@
+/* styles.css or your component's CSS file */
+:host ::ng-deep {
+  nz-layout {
+    height: 100%;
+  }
+
+  .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .trigger:hover {
+    color: #1890ff;
+  }
+
+  .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+  }
+
+  nz-header {
+    background: #fff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nz-content {
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 64px - 70px); 
+    /* Adjust based on header and footer height */
+  }
+
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+
+  .inner-content {
+    flex: 1;
+    padding: 24px;
+    background: #fff;
+    overflow-y: auto; 
+    /* Enables vertical scrolling */
+  }
+
+  .inner-content::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+
+  .inner-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+  }
+
+  .inner-content::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+  }
+
+  .inner-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb when hovered */
+  }
+
+
+  nz-footer {
+    text-align: center;
+  }
+
+  .sidebar {
+    height: 100vh;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+}

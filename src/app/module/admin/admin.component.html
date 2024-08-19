@@ -1,0 +1,27 @@
+<nz-layout>
+    <nz-sider class="sidebar" nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <div class="logo"></div>
+        <ul nz-menu nzTheme="dark" nzMode="inline">
+            <li nz-menu-item [routerLink]="['/admin/teacher']">
+                <span nz-icon nzType="user-switch" nzTheme="outline"></span>
+                <span>Teacher</span>
+            </li>
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header>
+            <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+                (click)="isCollapsed = !isCollapsed"></span>
+        </nz-header>
+        <nz-content>
+            <nz-breadcrumb>
+                <nz-breadcrumb-item>Admin</nz-breadcrumb-item>
+                <nz-breadcrumb-item [routerLink]="['/admin/teacher']">Teacher</nz-breadcrumb-item>
+            </nz-breadcrumb>
+            <div class="inner-content">
+                <router-outlet></router-outlet>
+            </div>
+        </nz-content>
+        <nz-footer>Oybek </nz-footer>
+    </nz-layout>
+</nz-layout>

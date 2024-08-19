@@ -1,0 +1,81 @@
+<h3 class="title" [routerLink]="['/admin/teacher']">
+    <span nz-icon nzType="arrow-left" nzTheme="outline"></span>
+    {{isAdd ? 'Add Teacher' : 'Edit Teacher'}}
+</h3>
+
+<form nz-form [formGroup]="form">
+    <!-- Name -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!" [nzSpan]="14">
+            <input nz-input name="name" type="text" id="name" formControlName="name" placeholder="write name" />
+        </nz-form-control>
+    </nz-form-item>
+    <!-- Description -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="description">Description</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!" [nzSpan]="14">
+            <input nz-input name="description" type="text" id="description" formControlName="description"
+                placeholder="write description" />
+        </nz-form-control>
+    </nz-form-item>
+    <!-- address -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="address">Address</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!" [nzSpan]="14">
+            <input nz-input name="address" type="text" id="address" formControlName="address"
+                placeholder="write address" />
+        </nz-form-control>
+    </nz-form-item>
+
+    <!-- dateOfBirth -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="dateOfBirth">DateOfBirth</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!" [nzSpan]="14">
+            <input nz-input name="dateOfBirth" type="text" id="dateOfBirth" formControlName="dateOfBirth" />
+        </nz-form-control>
+    </nz-form-item>
+    <!-- dateOfRegister -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="dateOfRegister">DateOfRegister</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!!" [nzSpan]="14">
+            <input nz-input name="dateOfRegister" type="text" id="dateOfRegister" formControlName="dateOfRegister" />
+        </nz-form-control>
+    </nz-form-item>
+    <!-- Phone -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="Phone">Phone</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!" [nzSpan]="14">
+            <input nz-input name="Phone" type="text" id="Phone" formControlName="Phone" placeholder="Phone number" />
+        </nz-form-control>
+    </nz-form-item>
+    <!-- email -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="email">Email</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!" [nzSpan]="14">
+            <input nz-input name="email" type="text" id="email" formControlName="email" placeholder="write email" />
+        </nz-form-control>
+    </nz-form-item>
+    <!-- telegramUserName -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="telegramUserName">Telegram</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!" [nzSpan]="14">
+            <input nz-input name="telegramUserName" type="text" id="telegramUserName" formControlName="telegramUserName"
+                placeholder="write telegramUserName" />
+        </nz-form-control>
+    </nz-form-item>
+    <!-- specialization -->
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="specialization">Specialization</nz-form-label>
+        <nz-form-control nzErrorTip="Required field!" [nzSpan]="14">
+            <input nz-input name="specialization" type="text" id="specialization" formControlName="specialization"
+                placeholder="write specialization" />
+        </nz-form-control>
+    </nz-form-item>
+
+
+    <div class="button">
+        <button nz-button nzType="primary" (click)="submit()">{{isAdd ? 'Add' : 'Edit'}}</button>
+        <button nz-button (click)="clear()">Reset</button>
+    </div>
+</form>

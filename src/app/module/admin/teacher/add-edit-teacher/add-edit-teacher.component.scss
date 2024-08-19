@@ -1,0 +1,12 @@
+.title{
+    span:hover{
+    color:rgb(81, 81, 150);
+    cursor: pointer;
+    }
+}
+
+.button{
+    display: flex;
+    gap: 10px;
+    float: right;
+}
